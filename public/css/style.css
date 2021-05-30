@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    margin: auto;
+}
+
+.main {
+    margin: auto;
+}
+
+.viewArea {
+    border: 1px solid lightgray;
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    width: 90vw;
+    /* height: 70vh; */
+    overflow: scroll;
+    margin: auto;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: block;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  /* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 15px;
+    border: 1px solid #cecece;
+    width: 80%; /* Could be more or less, depending on screen size */
+    box-shadow: 0px 0px 25px 4px rgba(0,0,0,0.2);
+}
+.modal-body {
+    display: inline-grid;
+}
+   
+  /* The Close Button */
+close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+ }
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.otherPlayers {
+    /* border: 1px solid lightblue;
+    border-radius: 5px; */
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opponentWidget {
+    display: grid;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 282px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    background-color: whitesmoke;
+}
+
+.cardSheet {
+    /* border: 1px solid lightcyan;
+    border-radius: 2px; */
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    margin: auto;
+    margin-left: 1px;
+    margin-right: 1px;
+    /* margin-top: 5px; */
+}
+
+.cardsOpponent {
+    /* border: 1px solid burlywood; */
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: top;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.avatarOpponent {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.scoreOpponent {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.opponentName {
+    margin-left: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.playerWidget {
+    display: grid;
+    position: relative;
+    overflow: auto;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 0.4em;
+    background-color: whitesmoke;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 0.5fr 0.3fr;
+    width: 35em;
+}
+
+
+.playerCards {
+    margin: 10px 5px 10px 10px;
+    display: inline-block;
+    /* vertical-align: top; */
+    width: 278px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+
+.avatarPlayer {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 10px 5px 10px 5px;
+    display: inline-block;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.playerEndMove {
+    vertical-align: top;
+    /* margin: 25px 10px 10px 10px; */
+    margin-top: 10px;
+
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.scorePlayer {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 12px;
+}
+
+.playerName {
+    margin-left: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.board {
+    width: 2050px;
+    height: 2050px;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 0;
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+}
+
+.cell {
+    width: 64px;
+    height: 64px;
+    background-color: whitesmoke;
+    border: 1px solid #c0cfcf;
+    border-radius: 3px;
+    background-size: contain;
+}
+
+.player-cell {
+    /* border: 1px solid rgb(155, 152, 152); */
+    display: inline-block;
+    margin: 0 2px;
+    width: 65px;
+    height: 65px;
+    box-shadow: inset 0px 0px 8px 4px rgba(0,0,0,0.2);
+    /* background-color:rgb(241, 241, 241); */
+}
+
+.card {
+    border: 1px solid white;
+    background-size: contain;
+}
+
+
+.player-card {
+    background-size: contain;
+    margin: 0 0;
+    width: 64px;
+    height: 64px;
+    vertical-align: bottom;
+    cursor: all-scroll;
+}
+
+
+.hide {
+    display: none;
+}
+
+.hovered {
+    background-color: rgb(193, 218, 163);
+}
+
+.enter {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
